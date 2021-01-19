@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main()
+#include "header.h"
+/*int main()
 {
     int n, i, j, temp;
     int arr[64];
@@ -9,9 +10,14 @@ int main()
     for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
-    }
-    for (i = 1 ; i <= n - 1; i++)
+    }*/
+
+    void insert(int arr[], int n)
     {
+	int i,j;
+	int temp;
+      	for (i = 1 ; i <= n - 1; i++)
+	{
 	    j = i;
             while ( j > 0 && arr[j-1] > arr[j])
             {	        
@@ -20,11 +26,10 @@ int main()
                 arr[j-1] = temp;
 		j--;
             }
-    }
-    printf("Sorted list in ascending order:\n");
+       	}
+    printf("insertion sorted elements:\n");
     for (i = 0; i <= n - 1; i++)
     {
         printf("%d\n", arr[i]);
     }
-    return 0;
-}         
+    }         

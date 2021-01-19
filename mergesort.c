@@ -1,24 +1,16 @@
 #include <stdio.h>
-void mergeSort(int [], int, int, int);
-void partition(int [],int, int); 
-int main()
+#include "header.h"
+void partition(int [], int, int);
+void mergeSort(int [],int ,int,int);
+void merge(int list[], int size)
 {
-    int list[50];
-    int i, size;
-    printf("Enter total number of elements:");
-    scanf("%d", &size);
-    printf("Enter the elements:\n");
-    for(i = 0; i < size; i++)
-    {
-         scanf("%d", &list[i]);
-    }
+    int i;
     partition(list, 0, size - 1);
-    printf("After merge sort:\n");
+    printf("merge sorted elements:\n");
     for(i = 0;i < size; i++)
     {
-         printf("%d   ",list[i]);
+         printf("%d\n",list[i]);
     } 
-   return 0;
 }
 
 void partition(int list[],int low,int high)
